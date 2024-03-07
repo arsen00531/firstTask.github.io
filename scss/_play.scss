@@ -1,0 +1,114 @@
+.play {
+    padding-top: 15px;
+    padding-bottom: 70px;
+    background-color: $black;
+    color: $white;
+    @include borderImage('../images/pixelsUp.png', 70px);
+
+    .play__container {
+        @include basicContainer();
+    }
+
+    .play__title {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 20px;
+
+        img {
+            margin-right: 40px;
+        }
+    }
+
+    .play__text {
+        margin-bottom: 20px;
+        span {
+            color: $darkBlue;
+        }
+    }
+
+    .play__flex {
+        display: flex;
+        justify-content: space-between;
+
+        .play__flex__form {
+            input:not(.play__form-checkbox) {
+                @include fontRoboto300;
+                outline: transparent;
+                border: none;
+                background-color: $black;
+                border-bottom: 2px solid $gray;
+                display: inline;
+                font-size: 18px;
+                padding-bottom: 15px;
+                padding-left: 5px;
+                color: $white;
+                margin-bottom: 35px;
+                width: 100%;
+            }
+
+            input:nth-child(3) {
+                display: none;
+            }
+
+            .file {
+                color: $gray;
+                border: 2px dashed $gray;
+                padding: 40px;
+                display: block;
+                margin-bottom: 30px;
+                cursor: pointer;
+
+                p {
+                    display: inline-block;
+                }
+            }
+
+            .play__flex__form-send {
+                @include buttons(18px, $lightYellow, $black);
+                display: inline-block;
+                margin-bottom: 10px;
+            }
+
+            .play__form-checkbox-label {
+                display: inline-flex;
+                align-items: center;
+                user-select: none;
+                color: $gray;
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 1em;
+                    height: 1em;
+                    flex-shrink: 0;
+                    flex-grow: 0;
+                    border: 1px solid #adb5bd;
+                    border-radius: 0.25em;
+                    margin-right: 0.5em;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 50% 50%;
+                }
+            }
+
+            .play__form-checkbox {
+                position: absolute;
+                z-index: -1;
+                opacity: 0;
+                width: 1em;
+
+                &:checked + .play__form-checkbox-label::before {
+                    border-color: $gray;
+                    background-color: transparent;
+                    background-image: url("../images/svg/strelka.svg");
+                }
+            }
+        }
+
+        .play__flex__stations {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+    }
+}

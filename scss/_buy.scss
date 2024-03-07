@@ -1,0 +1,59 @@
+.buy {
+
+    .buy-flex {
+        display: flex;
+        justify-content: center;
+    }
+
+    .buy__image {
+        flex: 1;
+        
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        
+    }
+
+    .buy__info {
+        background-color: $black;
+        color: $white;
+        padding: 70px 40px 70px 30px;
+        flex: 1;
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: $darkBlue;
+            margin-bottom: 15px;
+        }
+
+        .buy__info-more {
+            display: flex;
+            margin-bottom: 15px;
+
+            .buy__info-more:last-child {
+                margin-bottom: 50px;
+            }
+
+            img {
+                margin-right: 10px;
+                object-fit: contain
+            }
+        }
+
+        .but__info-platform {
+            display: flex;
+            flex-wrap: wrap;
+            width: 20em;
+            gap: 40px;
+
+            img {
+                object-fit: contain;
+            }
+        }
+    }
+}

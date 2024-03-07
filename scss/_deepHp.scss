@@ -1,0 +1,51 @@
+.deepHp {
+    @include borderImage('../images/pixelsDown.png', 70px);
+    background-color: $lightYellow;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    display: flex;
+
+    .deepHp__container {
+        @include basicContainer();
+        display: flex;
+
+        .deepHp__komp {
+            margin-right: 20px;
+
+            .deepHp__komp-flex {
+                text-align: center;
+
+                & img:nth-child(2) {
+                    position: relative;
+                    bottom: 30px;
+                }
+            }
+        }
+
+        .deepHp__text {
+
+            h1 {
+                margin-bottom: 10px;
+            }
+
+            .deepHp__text-more {
+                display: flex;
+                margin-bottom: 20px;
+
+                &:last-child {
+                    margin-bottom: 30px;
+                }
+
+                img {
+                    margin-right: 10px;
+                    object-fit: contain
+                }
+            }
+
+            a {
+                @include buttons();
+                display: inline-block;
+            }
+        }
+    }
+}

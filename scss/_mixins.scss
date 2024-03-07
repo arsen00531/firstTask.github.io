@@ -1,0 +1,29 @@
+@mixin basicPadding($top: 0, $bottom: 0) {
+    padding: $top 0 $bottom 0;
+}
+
+@mixin basicContainer($maxWidth: 70%) {
+    max-width: $maxWidth;
+    margin: 0 auto;
+}
+
+@mixin buttons($size: 18px, $bgcolor: #000, $color: $lightYellow, $height: 21px) {
+    @include fontRoboto700();
+    font-size: $size;
+    background-color: $bgcolor;
+    color: $color;
+    line-height: $height;
+    font-weight: 700;
+    padding: 19px 50px;
+}
+
+@mixin borderImage($url, $topWidth: 0, $bottomWidth: 0) {
+    border-style: solid;
+    border-width: $topWidth 0px $bottomWidth 0px;
+    -moz-border-image: url($url);
+    -webkit-border-image: url($url);
+    -o-border-image: url($url);
+    border-image: url($url);
+    border-image-slice: 70;
+    border-image-repeat: repeat;
+}

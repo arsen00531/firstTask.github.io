@@ -1,0 +1,44 @@
+.header {
+    @include basicPadding(20px);
+    background-image: url('../images/hero.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .header__container {
+        @include basicContainer();
+    }
+
+    .header__logo {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 540px;
+
+        .header__logo-contact a {
+            margin-left: 40px;
+        }
+    }
+
+    .header__access {
+        max-width: 500px;
+        background-color: $lightYellow;
+        padding: 70px;
+        clip-path: polygon(
+            3em 0, 
+            100% 0, 
+            100% calc(100% - 3em), 
+            92% 100%, 
+            0 100%, 
+            0% 3em
+        );
+
+        .header__access-text {
+            margin-bottom: 20px;
+        }
+
+        .header__access-getmore {
+            @include buttons(24px, #000, $lightYellow, 40px);
+            width: 35%;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+a:hover {
+    opacity: .9;
+}
+
+@import './variables';
+@import './mixins';
+@import './fonts';
+@import './header';
+@import './change-you';
+@import './play';
+@import './deepHp';
+@import './buy';
+@import './footer';
+@import './media';

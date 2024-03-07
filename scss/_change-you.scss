@@ -1,0 +1,24 @@
+.change-you {
+    padding-top: 70px;
+    padding-bottom: 40px;
+
+    .change-you__container {
+        @include basicContainer();
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    .change-you__text {
+        margin-bottom: 70px;
+
+        span {
+            color: $darkBlue;
+        }
+    }
+
+    .change-you__images {
+        display: flex;
+    }
+}

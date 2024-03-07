@@ -1,0 +1,41 @@
+.footer {
+
+    .footer__container {
+        @include basicContainer();
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 13px;
+        padding-bottom: 13px;
+
+        .footer__cyber {
+            display: flex;
+
+            img:first-child {
+                margin-right: 30px;
+            }
+        }
+
+        .footer__lisence {
+            display: flex;
+            align-items: center;
+
+            h3 {
+                margin-right: 30px;
+            }
+        }
+    }
+
+    .footer__CDPROJECT {
+        background-color: $black;
+        color: $white;
+        padding: 13px 0;
+
+        h3 {
+            font-size: 12px;
+            line-height: 14px;
+            display: table;
+            margin: 0 auto;
+        }
+    }
+}
